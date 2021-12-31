@@ -1,5 +1,8 @@
 package com.jessin.practice.dubbo.service;
 
+import com.jessin.practice.dubbo.model.AppInfo;
+import com.jessin.practice.dubbo.model.BizType;
+import com.jessin.practice.dubbo.model.Result;
 import com.jessin.practice.dubbo.model.User;
 import com.jessin.practice.dubbo.model.UserParam;
 import java.util.ArrayList;
@@ -12,6 +15,8 @@ import java.util.Map;
  * @Date: 19-11-24 上午11:23
  */
 public interface UserService {
+    User getException();
+
     User getUser();
 
     User getUser(UserParam userParam);
@@ -30,4 +35,18 @@ public interface UserService {
             HashMap<String, UserParam> userParamMap2);
 
     User getUser(List list, Map userParamMap);
+
+    Map<String, User> getReturn(AppInfo<User> appInfo);
+
+    Map<String, Map<String, User>> getReturn2(AppInfo appInfo);
+
+    Map<String, List<User>> getReturn3(AppInfo<User>[] appInfos);
+
+    Result getReturn4(List<List<UserParam>> queryParam);
+
+    Result<User> getReturn5(List<ArrayList<UserParam>> queryParam);
+
+    Result<User> getReturn6(List<AppInfo<User>> queryParam, BizType biz);
+
+
 }
