@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @Author: jessin
@@ -48,5 +49,16 @@ public interface UserService {
 
     Result<User> getReturn6(List<AppInfo<User>> queryParam, BizType biz);
 
+    /**
+     * test return CompletableFuture
+     * @param age
+     * @return
+     */
+    CompletableFuture getReturn7(int age);
 
+    CompletableFuture<User> getReturn8(int age);
+
+    CompletableFuture<Result<User>> getReturn9(int age);
+
+    CompletableFuture<Result<User>> getReturnTimeout(int age);
 }
