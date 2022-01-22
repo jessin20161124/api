@@ -67,4 +67,6 @@ public interface UserService {
     Integer getPrimitiveInteger(int age);
 
     BizType getEnum(int age);
+
+    List<User> getList(int age);
 }
