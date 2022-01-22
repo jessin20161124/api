@@ -61,4 +61,10 @@ public interface UserService {
     CompletableFuture<Result<User>> getReturn9(int age);
 
     CompletableFuture<Result<User>> getReturnTimeout(int age);
+
+    int getPrimitiveInt(int age);
+
+    Integer getPrimitiveInteger(int age);
+
+    BizType getEnum(int age);
 }
